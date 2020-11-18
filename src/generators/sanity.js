@@ -1,6 +1,5 @@
 module.exports = (plop) => {
-  plop.load('plop-pack-npm-install-package');
-  plop.setGenerator('Sanity', {
+  plop.setGenerator('sanity', {
     description: 'Add Sanity CMS to your project',
     prompts: [
       {
