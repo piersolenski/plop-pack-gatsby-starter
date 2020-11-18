@@ -1,0 +1,22 @@
+import React from 'react';
+import Layout from 'components/common/Layout';
+import SEO from 'components/common/Seo';
+import Grid from 'components/common/Grid';
+import Section from 'components/common/Section';
+{{>importList}}
+
+export default function {{ properCase name }}() {
+  return (
+    <Layout>
+      <SEO
+        title="{{ properCase name }}"
+        description=""
+      />
+      <Section>
+        <Grid>
+          <h1>{{ properCase name }}</h1>
+        </Grid>
+      </Section>
+    </Layout>
+  );
+}
