@@ -39,11 +39,7 @@ module.exports = (plop) => {
       },
       {
         type: 'npmInstallPackages',
-        name: 'gatsby-source-sanity', // your module name
-        path: '.',
-        npmLoad: {
-          loglevel: 'silent',
-        },
+        install: 'gatsby-source-sanity',
       },
     ],
   });
