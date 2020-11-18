@@ -1,6 +1,6 @@
 {
   "name": "plop-pack-gatsby-starter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A plop-pack for gatsby-starter",
   "main": "plopfile.js",
   "keywords": [
