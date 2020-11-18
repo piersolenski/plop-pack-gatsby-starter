@@ -51,7 +51,7 @@
     "inquirer-checkbox-plus-prompt": "^1.0.1",
     "is-svg": "^4.2.1",
     "plop": "^2.7.4",
-    "plop-pack-npm-install-packages": "^0.0.1",
+    "plop-pack-npm-install-packages": "^0.0.2",
     "validator": "^13.1.17"
   }
 }
