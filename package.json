@@ -50,6 +50,6 @@
     "glob": "^7.1.6",
     "inquirer-checkbox-plus-prompt": "^1.0.1",
     "plop": "^2.7.4",
-    "plop-pack-npm-install-package": "^0.0.3"
+    "plop-pack-npm-install-packages": "^0.0.1"
   }
 }
