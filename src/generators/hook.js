@@ -1,3 +1,5 @@
+const { isEmpty } = require('validator');
+
 module.exports = (plop) => {
   const hookName = 'use{{properCase (stripUsePrefix name)}}';
   plop.setHelper('stripUsePrefix', (str) => str.replace('use', ''));
@@ -9,6 +11,7 @@ module.exports = (plop) => {
         type: 'input',
         name: 'name',
         message: `What is your hook's name?`,
+        validate: (value) => !isEmpty(value) || 'Required',
       },
     ],
     actions: [

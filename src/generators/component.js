@@ -1,6 +1,7 @@
 const fs = require('fs');
 const checkboxPlus = require('inquirer-checkbox-plus-prompt');
 const getImports = require('../utils/get-imports');
+const { isEmpty } = require('validator');
 
 module.exports = (plop) => {
   const rootDir = plop.getDestBasePath();
@@ -16,12 +17,14 @@ module.exports = (plop) => {
         type: 'input',
         name: 'name',
         message: 'What is your component name?',
+        validate: (value) => !isEmpty(value) || 'Required',
       },
       {
         type: 'list',
         name: 'componentDirectory',
         message: 'Select component directory',
         choices: componentDirectories,
+        validate: (value) => !isEmpty(value) || 'Required',
       },
       {
         type: 'checkbox-plus',

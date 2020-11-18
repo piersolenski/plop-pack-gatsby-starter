@@ -1,6 +1,7 @@
 const fs = require('fs');
+const { isEmpty, isURL } = require('validator');
 
-module.exports = (plop) => {
+module.exports = function (plop) {
   const rootDir = plop.getDestBasePath();
   const readmePath = `${rootDir}/README.md`;
   plop.load('../actions/jsonEdit.js');
@@ -11,21 +12,25 @@ module.exports = (plop) => {
         type: 'input',
         name: 'name',
         message: `Enter project name`,
+        validate: (value) => !isEmpty(value) || 'Required',
       },
       {
         type: 'input',
         name: 'description',
         message: `Enter project description`,
+        validate: (value) => !isEmpty(value) || 'Required',
       },
       {
         type: 'input',
         name: 'url',
         message: `Enter project url`,
+        validate: (value) => isURL(value) || 'Must be a valid URL',
       },
       {
         type: 'input',
         name: 'repository',
         message: `Enter project repository url`,
+        validate: (value) => isURL(value) || 'Must be a valid URL',
       },
     ],
     actions: [

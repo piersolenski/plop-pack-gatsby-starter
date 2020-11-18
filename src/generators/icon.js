@@ -1,3 +1,6 @@
+const { isEmpty } = require('validator');
+const isSvg = require('is-svg');
+
 module.exports = (plop) => {
   plop.load('../helpers/svgr');
   plop.setGenerator('icon', {
@@ -7,12 +10,13 @@ module.exports = (plop) => {
         type: 'input',
         name: 'name',
         message: `What is your icon's name?`,
-        validate: (value) => (value ? true : 'Pass a valid value'),
+        validate: (value) => !isEmpty(value) || 'Required',
       },
       {
         type: 'editor',
         name: 'code',
         message: `Add your SVG code to the editor then close to continue...`,
+        validate: (value) => isSvg(value) || `Not a valid SVG!`,
       },
     ],
     actions: [

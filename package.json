@@ -49,7 +49,9 @@
     "fuzzy": "^0.1.3",
     "glob": "^7.1.6",
     "inquirer-checkbox-plus-prompt": "^1.0.1",
+    "is-svg": "^4.2.1",
     "plop": "^2.7.4",
-    "plop-pack-npm-install-packages": "^0.0.1"
+    "plop-pack-npm-install-packages": "^0.0.1",
+    "validator": "^13.1.17"
   }
 }

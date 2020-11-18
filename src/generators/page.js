@@ -1,4 +1,5 @@
 const checkboxPlus = require('inquirer-checkbox-plus-prompt');
+const { isEmpty } = require('validator');
 const getImports = require('../utils/get-imports');
 
 module.exports = (plop) => {
@@ -13,6 +14,7 @@ module.exports = (plop) => {
         type: 'input',
         name: 'name',
         message: `What is your page's name?`,
+        validate: (value) => !isEmpty(value) || 'Required',
       },
       {
         type: 'checkbox-plus',
