@@ -1,4 +1,5 @@
 module.exports = (plop) => {
+  plop.load('plop-pack-npm-install-packages');
   plop.setGenerator('sanity', {
     description: 'Add Sanity CMS to your project',
     prompts: [
@@ -37,7 +38,7 @@ module.exports = (plop) => {
         templateFile: '../templates/sanity-config.hbs',
       },
       {
-        type: 'npmInstallPackage',
+        type: 'npmInstallPackages',
         name: 'gatsby-source-sanity', // your module name
         path: '.',
         npmLoad: {
