@@ -7,13 +7,12 @@
     "plop",
     "plop-pack",
     "plop-helper",
-    "plop-helper",
-    "gatsby-starter",
+    "plop-action",
+    "gatsby",
     "gatsby-starter",
     "helper",
     "npm",
-    "install",
-    "package"
+    "install"
   ],
   "repository": {
     "type": "git",
