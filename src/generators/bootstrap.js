@@ -24,7 +24,9 @@ module.exports = function (plop) {
         type: 'input',
         name: 'url',
         message: `Enter project url`,
-        validate: (value) => isURL(value) || 'Must be a valid URL',
+        validate: (value) =>
+          isURL(value, { require_protocol: true }) ||
+          'Must be a valid URL with a protocol',
       },
       {
         type: 'input',
