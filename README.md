@@ -1,4 +1,4 @@
-# Plop Pack Npm Install
+# Plop Pack Gatsby Starter
 
 [![npm](https://img.shields.io/npm/v/plop-pack-gatsby-starter.svg)](https://www.npmjs.com/package/plop-pack-gatsby-starter)
 
