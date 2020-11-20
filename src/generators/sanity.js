@@ -15,6 +15,7 @@ module.exports = (plop) => {
         type: 'input',
         name: 'dataset',
         message: 'Enter your dataset',
+        default: 'production',
         validate: (value) => !isEmpty(value) || 'Required',
       },
       {
