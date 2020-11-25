@@ -9,10 +9,7 @@ module.exports = (plop) => {
     file.set('name', plop.renderString(`{{dashCase name}}`, answers));
     file.set('title', plop.renderString(`{{titleCase name}}`, answers));
     file.set('homepage', answers.url);
-    file.set(
-      'description',
-      plop.renderString(`{{sentenceCase description}}`, answers)
-    );
+    file.set('description', plop.renderString(`{{description}}`, answers));
     file.set('repository.url', answers.repository);
     file.set('bugs.url', `${answers.repository}/issues`);
     file.save();
